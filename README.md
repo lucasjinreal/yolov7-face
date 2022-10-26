@@ -16,6 +16,15 @@ python detect.py --weights weights/yolov7-tiny-face.pt --view-img
 ```
 
 
+### Export
+
+export to onnx and torchscript:
+
+```
+python export.py --weights weights/yolov7-tiny-face.pt
+```
+
+
 #### Dataset
 
 [WiderFace](http://shuoyang1213.me/WIDERFACE/)
