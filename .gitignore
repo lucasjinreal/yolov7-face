@@ -1,0 +1,4 @@
+.vscode/
+weights/
+runs/
+widerface_evaluate/
