@@ -2,3 +2,4 @@
 weights/
 runs/
 widerface_evaluate/
+*.pt
