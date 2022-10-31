@@ -5,6 +5,7 @@ import logging
 import sys
 from copy import deepcopy
 from pathlib import Path
+from tracemalloc import is_tracing
 
 sys.path.append(Path(__file__).parent.parent.absolute().__str__())  # to run '$ python *.py' files in subdirectories
 logger = logging.getLogger(__name__)
@@ -297,8 +298,15 @@ class IKeypoint(nn.Module):
                     y = torch.cat((xy, wh, y[..., 4:]), -1)
 
                 z.append(y.view(bs, -1, self.no))
-
-        return x if self.training else (torch.cat(z, 1), x)
+        if self.training:
+            return x
+        else:
+            if torch.is_tracing():
+                z = torch.cat(z, 1)
+                return z
+            else:
+                return (torch.cat(z, 1), x)
+        # return x if self.training else (torch.cat(z, 1), x)
 
     @staticmethod
     def _make_grid(nx=20, ny=20):
