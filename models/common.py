@@ -17,6 +17,7 @@ from utils.datasets import letterbox
 from utils.general import non_max_suppression, non_max_suppression_export, make_divisible, scale_coords, increment_path, xyxy2xywh, save_one_box
 from utils.plots import colors, plot_one_box
 from utils.torch_utils import time_synchronized
+from alfred import print_shape
 
 
 def autopad(k, p=None):  # kernel, padding
@@ -51,7 +52,11 @@ class ImplicitA(nn.Module):
         nn.init.normal_(self.implicit, std=.02)
 
     def forward(self, x):
-        return self.implicit.expand_as(x) + x
+        # return self.implicit.expand_as(x) + x
+        # for wnnx inference
+        # print_shape(x)
+        # print_shape(self.implicit)
+        return self.implicit.repeat([1, 1, *x.shape[-2:]]) + x
 
 
 class ImplicitM(nn.Module):
@@ -62,7 +67,8 @@ class ImplicitM(nn.Module):
         nn.init.normal_(self.implicit, mean=1., std=.02)
 
     def forward(self, x):
-        return self.implicit.expand_as(x) * x
+        # return self.implicit.expand_as(x) * x
+        return self.implicit.repeat([1, 1,  *x.shape[-2:]]) * x
     
     
 class ReOrg(nn.Module):
