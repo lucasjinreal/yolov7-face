@@ -301,7 +301,9 @@ class IKeypoint(nn.Module):
         if self.training:
             return x
         else:
-            if torch.is_tracing():
+            print('----------- testing')
+            if torch.jit.is_tracing:
+                print('------ tracing z....')
                 z = torch.cat(z, 1)
                 return z
             else:
