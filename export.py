@@ -53,6 +53,7 @@ if __name__ == '__main__':
 
     # Input
     img = torch.zeros(opt.batch_size, 3, *opt.img_size).to(device)  # image size(1,3,320,192) iDetection
+    img.cpu().numpy().tofile('data0.bin')
 
     # Update model
     for k, m in model.named_modules():
@@ -65,10 +66,13 @@ if __name__ == '__main__':
         # elif isinstance(m, models.yolo.Detect):
         #     m.forward = m.forward_export  # assign forward (optional)
     model.model[-1].export = not opt.grid  # set Detect() layer grid export
+    model.eval()
+    print('this is dry run')
     y = model(img)  # dry run
     if opt.include_nms:
         model.model[-1].include_nms = True
         y = None
+    print('dry run done!')
 
     # TorchScript export
     try:
@@ -76,6 +80,9 @@ if __name__ == '__main__':
         f = opt.weights.replace('.pt', '.torchscript.pt')  # filename
         ts = torch.jit.trace(model, img, strict=False)
         ts.save(f)
+
+        o = ts(img)
+        o.cpu().numpy().tofile('gt.bin')
         print('TorchScript export success, saved as %s' % f)
     except Exception as e:
         print('TorchScript export failure: %s' % e)

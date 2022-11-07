@@ -4,3 +4,4 @@ runs/
 widerface_evaluate/
 *.pt
 *.bin
+__pycache__/

@@ -256,7 +256,8 @@ class IKeypoint(nn.Module):
     def forward(self, x):
         # x = x.copy()  # for profiling
         z = []  # inference output
-        self.training |= self.export
+        # self.training |= self.export
+        print(f'start export, nkpt: {self.nkpt}, x: {x[0].shape}, export: {self.export}, train: {self.training}')
         for i in range(self.nl):
             if self.nkpt is None or self.nkpt==0:
                 x[i] = self.im[i](self.m[i](self.ia[i](x[i])))  # conv
@@ -266,9 +267,13 @@ class IKeypoint(nn.Module):
             bs, _, ny, nx = x[i].shape  # x(bs,255,20,20) to x(bs,3,20,20,85)
             # x[i] = x[i].view(bs, self.na, self.no, ny, nx).permute(0, 1, 3, 4, 2).contiguous()
             x[i] = x[i].view(bs, self.na, self.no, ny, nx).permute(0, 1, 3, 4, 2)
+            print_shape(x[i])
             x_det = x[i][..., :6]
             x_kpt = x[i][..., 6:]
 
+            # z.append(x_det.reshape(bs, self.na * 6 * ny * nx))
+
+            print_shape(self.grid[i], x[i])
             if not self.training:  # inference
                 if self.grid[i].shape[2:4] != x[i].shape[2:4]:
                     self.grid[i] = self._make_grid(nx, ny).to(x[i].device)
@@ -280,16 +285,26 @@ class IKeypoint(nn.Module):
                 else:
                     y = x_det.sigmoid()
 
+                y = y.view(bs, 3, -1, 6)
+                print_shape(x_det, x_kpt, y, kpt_grid_x, self.grid[i])
+                
+                kpt_grid_x_sq = kpt_grid_x.view(1, 1, -1, 1)
+                kpt_grid_y_sq = kpt_grid_y.view(1, 1, -1, 1)
+                grid_i_seq =self.grid[i].view(1, 1, -1, 2)
+
                 if self.inplace:
-                    xy = (y[..., 0:2] * 2. - 0.5 + self.grid[i]) * self.stride[i]  # xy
-                    wh = (y[..., 2:4] * 2) ** 2 * self.anchor_grid[i].view(1, self.na, 1, 1, 2) # wh
+                    xy = (y[..., 0:2] * 2. - 0.5 + grid_i_seq) * self.stride[i]  # xy
+                    wh = (y[..., 2:4] * 2) ** 2 * self.anchor_grid[i].view(1, self.na, 1, 2) # wh
+
+                    print_shape(xy, wh)
                     if self.nkpt != 0:
-                        x_kpt[..., 0::3] = (x_kpt[..., ::3] * 2. - 0.5 + kpt_grid_x.repeat(1,1,1,1,self.nkpt)) * self.stride[i]  # xy
-                        x_kpt[..., 1::3] = (x_kpt[..., 1::3] * 2. - 0.5 + kpt_grid_y.repeat(1,1,1,1,self.nkpt)) * self.stride[i]  # xy
+                        x_kpt = x_kpt.view(bs, 3, -1, 15)
+                        x_kpt[..., 0::3] = (x_kpt[..., ::3] * 2. - 0.5 + kpt_grid_x_sq.repeat(1,1,1,self.nkpt)) * self.stride[i]  # xy
+                        x_kpt[..., 1::3] = (x_kpt[..., 1::3] * 2. - 0.5 + kpt_grid_y_sq.repeat(1,1,1,self.nkpt)) * self.stride[i]  # xy
                         x_kpt[..., 2::3] = x_kpt[..., 2::3].sigmoid()
-
-                    y = torch.cat((xy, wh, y[..., 4:], x_kpt), dim = -1)
-
+                    
+                    y = y[..., 4:]
+                    y = torch.cat((xy, wh, y, x_kpt), dim = -1)
                 else:  # for YOLOv5 on AWS Inferentia https://github.com/ultralytics/yolov5/pull/2953
                     xy = (y[..., 0:2] * 2. - 0.5 + self.grid[i]) * self.stride[i]  # xy
                     wh = (y[..., 2:4] * 2) ** 2 * self.anchor_grid[i]  # wh
@@ -297,14 +312,16 @@ class IKeypoint(nn.Module):
                         y[..., 6:] = (y[..., 6:] * 2. - 0.5 + self.grid[i].repeat((1,1,1,1,self.nkpt))) * self.stride[i]  # xy
                     y = torch.cat((xy, wh, y[..., 4:]), -1)
 
+                print_shape(y)
                 z.append(y.view(bs, -1, self.no))
         if self.training:
             return x
         else:
             print('----------- testing')
-            if torch.jit.is_tracing:
+            if torch.jit.is_tracing():
                 print('------ tracing z....')
                 z = torch.cat(z, 1)
+                print(z.shape)
                 return z
             else:
                 return (torch.cat(z, 1), x)
