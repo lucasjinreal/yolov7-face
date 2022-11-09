@@ -15,6 +15,8 @@ from utils.activations import Hardswish, SiLU
 from utils.general import set_logging, check_img_size
 from utils.torch_utils import select_device
 from utils.add_nms import RegisterNMS
+import traceback
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -70,22 +72,36 @@ if __name__ == '__main__':
     print('this is dry run')
     y = model(img)  # dry run
     if opt.include_nms:
-        model.model[-1].include_nms = True
-        y = None
+        # model.model[-1].include_nms = True
+        nms = models.common.NMS(conf=0.01, kpt_label=4)
+        nms_export = models.common.NMS_Export(conf=0.01, kpt_label=4)
+        y_export = nms_export(y)
+        y = nms(y)
+        #assert (torch.sum(torch.abs(y_export[0]-y[0]))<1e-6)
+        model_nms = torch.nn.Sequential(model, nms_export)
+        model_nms.eval()
+
     print('dry run done!')
 
     # TorchScript export
     try:
         print('\nStarting TorchScript export with torch %s...' % torch.__version__)
         f = opt.weights.replace('.pt', '.torchscript.pt')  # filename
-        ts = torch.jit.trace(model, img, strict=False)
+        if opt.include_nms:
+            ts = torch.jit.trace(model_nms, img, strict=False)
+        else:
+            ts = torch.jit.trace(model, img, strict=False)
         ts.save(f)
 
         o = ts(img)
-        o.cpu().numpy().tofile('gt.bin')
+        if opt.include_nms:
+            print(o)
+        else:
+            o.cpu().numpy().tofile('gt.bin')
         print('TorchScript export success, saved as %s' % f)
     except Exception as e:
         print('TorchScript export failure: %s' % e)
+        traceback.print_exc()
 
     # CoreML export
     try:

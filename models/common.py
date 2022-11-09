@@ -528,7 +528,11 @@ class NMS_Export(nn.Module):
         self.kpt_label = kpt_label
 
     def forward(self, x):
-        return non_max_suppression_export(x[0], conf_thres=self.conf, iou_thres=self.iou, classes=self.classes, kpt_label=self.kpt_label)
+        if isinstance(x, tuple):
+            x = x[0]
+        print(f'------ NMS_Export: {x}')
+        # return non_max_suppression_export(x[0], conf_thres=self.conf, iou_thres=self.iou, classes=self.classes, kpt_label=self.kpt_label)
+        return non_max_suppression_export(x, conf_thres=self.conf, iou_thres=self.iou, classes=self.classes, kpt_label=self.kpt_label)
 
 
 
