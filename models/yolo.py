@@ -301,12 +301,12 @@ class IKeypoint(nn.Module):
                     if self.nkpt != 0:
                         x_kpt = x_kpt.view(bs, 3, -1, 15)
                         x_kpt[..., 0::3] = (x_kpt[..., ::3] * 2. - 0.5 + kpt_grid_x_sq.repeat(1,1,1,self.nkpt)) * self.stride[i]  # xy
-                        # x_kpt[..., 1::3] = (x_kpt[..., 1::3] * 2. - 0.5 + kpt_grid_y_sq.repeat(1,1,1,self.nkpt)) * self.stride[i]  # xy
-                        # x_kpt[..., 2::3] = x_kpt[..., 2::3].sigmoid()
-                    y = x_kpt
+                        x_kpt[..., 1::3] = (x_kpt[..., 1::3] * 2. - 0.5 + kpt_grid_y_sq.repeat(1,1,1,self.nkpt)) * self.stride[i]  # xy
+                        x_kpt[..., 2::3] = x_kpt[..., 2::3].sigmoid()
+                    # y = x_kpt
 
-                    # y = y[..., 4:]
-                    # y = torch.cat((xy, wh, y, x_kpt), dim = -1)
+                    y = y[..., 4:]
+                    y = torch.cat((xy, wh, y, x_kpt), dim = -1)
                     
                 else:  # for YOLOv5 on AWS Inferentia https://github.com/ultralytics/yolov5/pull/2953
                     xy = (y[..., 0:2] * 2. - 0.5 + self.grid[i]) * self.stride[i]  # xy
@@ -316,8 +316,8 @@ class IKeypoint(nn.Module):
                     y = torch.cat((xy, wh, y[..., 4:]), -1)
 
                 print_shape(y)
-                # z.append(y.view(bs, -1, self.no)
-                z.append(y.reshape(bs, -1, 15))
+                z.append(y.view(bs, -1, self.no))
+                # z.append(y.reshape(bs, -1, 15))
         if self.training:
             return x
         else:
