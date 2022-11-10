@@ -1,169 +1,169 @@
 7767517
-288 296
+289 297
 pnnx.Input               pnnx_input_0             0 1 0 #0=(1,3,640,640)f32
-nn.Conv2d                model.0.conv             1 1 0 1 bias=True dilation=(1,1) groups=1 in_channels=3 kernel_size=(3,3) out_channels=32 padding=(1,1) padding_mode=zeros stride=(2,2) @bias=(32)f32 @weight=(32,3,3,3)f32 #0=(1,3,640,640)f32 #1=(1,32,320,320)f32
-nn.LeakyReLU             model.0.act              1 1 1 2 negative_slope=1.000000e-01 #1=(1,32,320,320)f32 #2=(1,32,320,320)f32
-nn.Conv2d                model.1.conv             1 1 2 3 bias=True dilation=(1,1) groups=1 in_channels=32 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(2,2) @bias=(64)f32 @weight=(64,32,3,3)f32 #2=(1,32,320,320)f32 #3=(1,64,160,160)f32
-nn.LeakyReLU             model.1.act              1 1 3 4 negative_slope=1.000000e-01 #3=(1,64,160,160)f32 #4=(1,64,160,160)f32
-nn.Conv2d                model.2.conv             1 1 4 5 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(1,1) out_channels=32 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,64,1,1)f32 #4=(1,64,160,160)f32 #5=(1,32,160,160)f32
-nn.LeakyReLU             model.2.act              1 1 5 6 negative_slope=1.000000e-01 #5=(1,32,160,160)f32 #6=(1,32,160,160)f32
-nn.Conv2d                model.3.conv             1 1 4 7 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(1,1) out_channels=32 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,64,1,1)f32 #4=(1,64,160,160)f32 #7=(1,32,160,160)f32
-nn.LeakyReLU             model.3.act              1 1 7 8 negative_slope=1.000000e-01 #7=(1,32,160,160)f32 #8=(1,32,160,160)f32
-nn.Conv2d                model.4.conv             1 1 8 9 bias=True dilation=(1,1) groups=1 in_channels=32 kernel_size=(3,3) out_channels=32 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,32,3,3)f32 #8=(1,32,160,160)f32 #9=(1,32,160,160)f32
-nn.LeakyReLU             model.4.act              1 1 9 10 negative_slope=1.000000e-01 #9=(1,32,160,160)f32 #10=(1,32,160,160)f32
-nn.Conv2d                model.5.conv             1 1 10 11 bias=True dilation=(1,1) groups=1 in_channels=32 kernel_size=(3,3) out_channels=32 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,32,3,3)f32 #10=(1,32,160,160)f32 #11=(1,32,160,160)f32
-nn.LeakyReLU             model.5.act              1 1 11 12 negative_slope=1.000000e-01 #11=(1,32,160,160)f32 #12=(1,32,160,160)f32
+nn.Conv2d                0.model.0.conv           1 1 0 1 bias=True dilation=(1,1) groups=1 in_channels=3 kernel_size=(3,3) out_channels=32 padding=(1,1) padding_mode=zeros stride=(2,2) @bias=(32)f32 @weight=(32,3,3,3)f32 #0=(1,3,640,640)f32 #1=(1,32,320,320)f32
+nn.LeakyReLU             0.model.0.act            1 1 1 2 negative_slope=1.000000e-01 #1=(1,32,320,320)f32 #2=(1,32,320,320)f32
+nn.Conv2d                0.model.1.conv           1 1 2 3 bias=True dilation=(1,1) groups=1 in_channels=32 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(2,2) @bias=(64)f32 @weight=(64,32,3,3)f32 #2=(1,32,320,320)f32 #3=(1,64,160,160)f32
+nn.LeakyReLU             0.model.1.act            1 1 3 4 negative_slope=1.000000e-01 #3=(1,64,160,160)f32 #4=(1,64,160,160)f32
+nn.Conv2d                0.model.2.conv           1 1 4 5 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(1,1) out_channels=32 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,64,1,1)f32 #4=(1,64,160,160)f32 #5=(1,32,160,160)f32
+nn.LeakyReLU             0.model.2.act            1 1 5 6 negative_slope=1.000000e-01 #5=(1,32,160,160)f32 #6=(1,32,160,160)f32
+nn.Conv2d                0.model.3.conv           1 1 4 7 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(1,1) out_channels=32 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,64,1,1)f32 #4=(1,64,160,160)f32 #7=(1,32,160,160)f32
+nn.LeakyReLU             0.model.3.act            1 1 7 8 negative_slope=1.000000e-01 #7=(1,32,160,160)f32 #8=(1,32,160,160)f32
+nn.Conv2d                0.model.4.conv           1 1 8 9 bias=True dilation=(1,1) groups=1 in_channels=32 kernel_size=(3,3) out_channels=32 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,32,3,3)f32 #8=(1,32,160,160)f32 #9=(1,32,160,160)f32
+nn.LeakyReLU             0.model.4.act            1 1 9 10 negative_slope=1.000000e-01 #9=(1,32,160,160)f32 #10=(1,32,160,160)f32
+nn.Conv2d                0.model.5.conv           1 1 10 11 bias=True dilation=(1,1) groups=1 in_channels=32 kernel_size=(3,3) out_channels=32 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,32,3,3)f32 #10=(1,32,160,160)f32 #11=(1,32,160,160)f32
+nn.LeakyReLU             0.model.5.act            1 1 11 12 negative_slope=1.000000e-01 #11=(1,32,160,160)f32 #12=(1,32,160,160)f32
 torch.cat                torch.cat_126            4 1 12 10 8 6 13 dim=1 #12=(1,32,160,160)f32 #10=(1,32,160,160)f32 #8=(1,32,160,160)f32 #6=(1,32,160,160)f32 #13=(1,128,160,160)f32
-nn.Conv2d                model.7.conv             1 1 13 14 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,128,1,1)f32 #13=(1,128,160,160)f32 #14=(1,64,160,160)f32
-nn.LeakyReLU             model.7.act              1 1 14 15 negative_slope=1.000000e-01 #14=(1,64,160,160)f32 #15=(1,64,160,160)f32
-nn.MaxPool2d             model.8.m                1 1 15 16 ceil_mode=False dilation=(1,1) kernel_size=(2,2) padding=(0,0) return_indices=False stride=(2,2) #15=(1,64,160,160)f32 #16=(1,64,80,80)f32
-nn.Conv2d                model.9.conv             1 1 16 17 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,1,1)f32 #16=(1,64,80,80)f32 #17=(1,64,80,80)f32
-nn.LeakyReLU             model.9.act              1 1 17 18 negative_slope=1.000000e-01 #17=(1,64,80,80)f32 #18=(1,64,80,80)f32
-nn.Conv2d                model.10.conv            1 1 16 19 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,1,1)f32 #16=(1,64,80,80)f32 #19=(1,64,80,80)f32
-nn.LeakyReLU             model.10.act             1 1 19 20 negative_slope=1.000000e-01 #19=(1,64,80,80)f32 #20=(1,64,80,80)f32
-nn.Conv2d                model.11.conv            1 1 20 21 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,3,3)f32 #20=(1,64,80,80)f32 #21=(1,64,80,80)f32
-nn.LeakyReLU             model.11.act             1 1 21 22 negative_slope=1.000000e-01 #21=(1,64,80,80)f32 #22=(1,64,80,80)f32
-nn.Conv2d                model.12.conv            1 1 22 23 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,3,3)f32 #22=(1,64,80,80)f32 #23=(1,64,80,80)f32
-nn.LeakyReLU             model.12.act             1 1 23 24 negative_slope=1.000000e-01 #23=(1,64,80,80)f32 #24=(1,64,80,80)f32
+nn.Conv2d                0.model.7.conv           1 1 13 14 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,128,1,1)f32 #13=(1,128,160,160)f32 #14=(1,64,160,160)f32
+nn.LeakyReLU             0.model.7.act            1 1 14 15 negative_slope=1.000000e-01 #14=(1,64,160,160)f32 #15=(1,64,160,160)f32
+nn.MaxPool2d             0.model.8.m              1 1 15 16 ceil_mode=False dilation=(1,1) kernel_size=(2,2) padding=(0,0) return_indices=False stride=(2,2) #15=(1,64,160,160)f32 #16=(1,64,80,80)f32
+nn.Conv2d                0.model.9.conv           1 1 16 17 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,1,1)f32 #16=(1,64,80,80)f32 #17=(1,64,80,80)f32
+nn.LeakyReLU             0.model.9.act            1 1 17 18 negative_slope=1.000000e-01 #17=(1,64,80,80)f32 #18=(1,64,80,80)f32
+nn.Conv2d                0.model.10.conv          1 1 16 19 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,1,1)f32 #16=(1,64,80,80)f32 #19=(1,64,80,80)f32
+nn.LeakyReLU             0.model.10.act           1 1 19 20 negative_slope=1.000000e-01 #19=(1,64,80,80)f32 #20=(1,64,80,80)f32
+nn.Conv2d                0.model.11.conv          1 1 20 21 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,3,3)f32 #20=(1,64,80,80)f32 #21=(1,64,80,80)f32
+nn.LeakyReLU             0.model.11.act           1 1 21 22 negative_slope=1.000000e-01 #21=(1,64,80,80)f32 #22=(1,64,80,80)f32
+nn.Conv2d                0.model.12.conv          1 1 22 23 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,3,3)f32 #22=(1,64,80,80)f32 #23=(1,64,80,80)f32
+nn.LeakyReLU             0.model.12.act           1 1 23 24 negative_slope=1.000000e-01 #23=(1,64,80,80)f32 #24=(1,64,80,80)f32
 torch.cat                torch.cat_127            4 1 24 22 20 18 25 dim=1 #24=(1,64,80,80)f32 #22=(1,64,80,80)f32 #20=(1,64,80,80)f32 #18=(1,64,80,80)f32 #25=(1,256,80,80)f32
-nn.Conv2d                model.14.conv            1 1 25 26 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,256,1,1)f32 #25=(1,256,80,80)f32 #26=(1,128,80,80)f32
-nn.LeakyReLU             model.14.act             1 1 26 27 negative_slope=1.000000e-01 #26=(1,128,80,80)f32 #27=(1,128,80,80)f32
-nn.MaxPool2d             model.15.m               1 1 27 28 ceil_mode=False dilation=(1,1) kernel_size=(2,2) padding=(0,0) return_indices=False stride=(2,2) #27=(1,128,80,80)f32 #28=(1,128,40,40)f32
-nn.Conv2d                model.16.conv            1 1 28 29 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,1,1)f32 #28=(1,128,40,40)f32 #29=(1,128,40,40)f32
-nn.LeakyReLU             model.16.act             1 1 29 30 negative_slope=1.000000e-01 #29=(1,128,40,40)f32 #30=(1,128,40,40)f32
-nn.Conv2d                model.17.conv            1 1 28 31 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,1,1)f32 #28=(1,128,40,40)f32 #31=(1,128,40,40)f32
-nn.LeakyReLU             model.17.act             1 1 31 32 negative_slope=1.000000e-01 #31=(1,128,40,40)f32 #32=(1,128,40,40)f32
-nn.Conv2d                model.18.conv            1 1 32 33 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,3,3)f32 #32=(1,128,40,40)f32 #33=(1,128,40,40)f32
-nn.LeakyReLU             model.18.act             1 1 33 34 negative_slope=1.000000e-01 #33=(1,128,40,40)f32 #34=(1,128,40,40)f32
-nn.Conv2d                model.19.conv            1 1 34 35 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,3,3)f32 #34=(1,128,40,40)f32 #35=(1,128,40,40)f32
-nn.LeakyReLU             model.19.act             1 1 35 36 negative_slope=1.000000e-01 #35=(1,128,40,40)f32 #36=(1,128,40,40)f32
+nn.Conv2d                0.model.14.conv          1 1 25 26 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,256,1,1)f32 #25=(1,256,80,80)f32 #26=(1,128,80,80)f32
+nn.LeakyReLU             0.model.14.act           1 1 26 27 negative_slope=1.000000e-01 #26=(1,128,80,80)f32 #27=(1,128,80,80)f32
+nn.MaxPool2d             0.model.15.m             1 1 27 28 ceil_mode=False dilation=(1,1) kernel_size=(2,2) padding=(0,0) return_indices=False stride=(2,2) #27=(1,128,80,80)f32 #28=(1,128,40,40)f32
+nn.Conv2d                0.model.16.conv          1 1 28 29 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,1,1)f32 #28=(1,128,40,40)f32 #29=(1,128,40,40)f32
+nn.LeakyReLU             0.model.16.act           1 1 29 30 negative_slope=1.000000e-01 #29=(1,128,40,40)f32 #30=(1,128,40,40)f32
+nn.Conv2d                0.model.17.conv          1 1 28 31 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,1,1)f32 #28=(1,128,40,40)f32 #31=(1,128,40,40)f32
+nn.LeakyReLU             0.model.17.act           1 1 31 32 negative_slope=1.000000e-01 #31=(1,128,40,40)f32 #32=(1,128,40,40)f32
+nn.Conv2d                0.model.18.conv          1 1 32 33 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,3,3)f32 #32=(1,128,40,40)f32 #33=(1,128,40,40)f32
+nn.LeakyReLU             0.model.18.act           1 1 33 34 negative_slope=1.000000e-01 #33=(1,128,40,40)f32 #34=(1,128,40,40)f32
+nn.Conv2d                0.model.19.conv          1 1 34 35 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,3,3)f32 #34=(1,128,40,40)f32 #35=(1,128,40,40)f32
+nn.LeakyReLU             0.model.19.act           1 1 35 36 negative_slope=1.000000e-01 #35=(1,128,40,40)f32 #36=(1,128,40,40)f32
 torch.cat                torch.cat_128            4 1 36 34 32 30 37 dim=1 #36=(1,128,40,40)f32 #34=(1,128,40,40)f32 #32=(1,128,40,40)f32 #30=(1,128,40,40)f32 #37=(1,512,40,40)f32
-nn.Conv2d                model.21.conv            1 1 37 38 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,512,1,1)f32 #37=(1,512,40,40)f32 #38=(1,256,40,40)f32
-nn.LeakyReLU             model.21.act             1 1 38 39 negative_slope=1.000000e-01 #38=(1,256,40,40)f32 #39=(1,256,40,40)f32
-nn.MaxPool2d             model.22.m               1 1 39 40 ceil_mode=False dilation=(1,1) kernel_size=(2,2) padding=(0,0) return_indices=False stride=(2,2) #39=(1,256,40,40)f32 #40=(1,256,20,20)f32
-nn.Conv2d                model.23.conv            1 1 40 41 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,1,1)f32 #40=(1,256,20,20)f32 #41=(1,256,20,20)f32
-nn.LeakyReLU             model.23.act             1 1 41 42 negative_slope=1.000000e-01 #41=(1,256,20,20)f32 #42=(1,256,20,20)f32
-nn.Conv2d                model.24.conv            1 1 40 43 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,1,1)f32 #40=(1,256,20,20)f32 #43=(1,256,20,20)f32
-nn.LeakyReLU             model.24.act             1 1 43 44 negative_slope=1.000000e-01 #43=(1,256,20,20)f32 #44=(1,256,20,20)f32
-nn.Conv2d                model.25.conv            1 1 44 45 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,3,3)f32 #44=(1,256,20,20)f32 #45=(1,256,20,20)f32
-nn.LeakyReLU             model.25.act             1 1 45 46 negative_slope=1.000000e-01 #45=(1,256,20,20)f32 #46=(1,256,20,20)f32
-nn.Conv2d                model.26.conv            1 1 46 47 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,3,3)f32 #46=(1,256,20,20)f32 #47=(1,256,20,20)f32
-nn.LeakyReLU             model.26.act             1 1 47 48 negative_slope=1.000000e-01 #47=(1,256,20,20)f32 #48=(1,256,20,20)f32
+nn.Conv2d                0.model.21.conv          1 1 37 38 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,512,1,1)f32 #37=(1,512,40,40)f32 #38=(1,256,40,40)f32
+nn.LeakyReLU             0.model.21.act           1 1 38 39 negative_slope=1.000000e-01 #38=(1,256,40,40)f32 #39=(1,256,40,40)f32
+nn.MaxPool2d             0.model.22.m             1 1 39 40 ceil_mode=False dilation=(1,1) kernel_size=(2,2) padding=(0,0) return_indices=False stride=(2,2) #39=(1,256,40,40)f32 #40=(1,256,20,20)f32
+nn.Conv2d                0.model.23.conv          1 1 40 41 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,1,1)f32 #40=(1,256,20,20)f32 #41=(1,256,20,20)f32
+nn.LeakyReLU             0.model.23.act           1 1 41 42 negative_slope=1.000000e-01 #41=(1,256,20,20)f32 #42=(1,256,20,20)f32
+nn.Conv2d                0.model.24.conv          1 1 40 43 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,1,1)f32 #40=(1,256,20,20)f32 #43=(1,256,20,20)f32
+nn.LeakyReLU             0.model.24.act           1 1 43 44 negative_slope=1.000000e-01 #43=(1,256,20,20)f32 #44=(1,256,20,20)f32
+nn.Conv2d                0.model.25.conv          1 1 44 45 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,3,3)f32 #44=(1,256,20,20)f32 #45=(1,256,20,20)f32
+nn.LeakyReLU             0.model.25.act           1 1 45 46 negative_slope=1.000000e-01 #45=(1,256,20,20)f32 #46=(1,256,20,20)f32
+nn.Conv2d                0.model.26.conv          1 1 46 47 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,3,3)f32 #46=(1,256,20,20)f32 #47=(1,256,20,20)f32
+nn.LeakyReLU             0.model.26.act           1 1 47 48 negative_slope=1.000000e-01 #47=(1,256,20,20)f32 #48=(1,256,20,20)f32
 torch.cat                torch.cat_129            4 1 48 46 44 42 49 dim=1 #48=(1,256,20,20)f32 #46=(1,256,20,20)f32 #44=(1,256,20,20)f32 #42=(1,256,20,20)f32 #49=(1,1024,20,20)f32
-nn.Conv2d                model.28.conv            1 1 49 50 bias=True dilation=(1,1) groups=1 in_channels=1024 kernel_size=(1,1) out_channels=512 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,1024,1,1)f32 #49=(1,1024,20,20)f32 #50=(1,512,20,20)f32
-nn.LeakyReLU             model.28.act             1 1 50 51 negative_slope=1.000000e-01 #50=(1,512,20,20)f32 #51=(1,512,20,20)f32
-nn.Conv2d                model.29.conv            1 1 51 52 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,512,1,1)f32 #51=(1,512,20,20)f32 #52=(1,256,20,20)f32
-nn.LeakyReLU             model.29.act             1 1 52 53 negative_slope=1.000000e-01 #52=(1,256,20,20)f32 #53=(1,256,20,20)f32
-nn.Conv2d                model.30.conv            1 1 51 54 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,512,1,1)f32 #51=(1,512,20,20)f32 #54=(1,256,20,20)f32
-nn.LeakyReLU             model.30.act             1 1 54 55 negative_slope=1.000000e-01 #54=(1,256,20,20)f32 #55=(1,256,20,20)f32
-nn.MaxPool2d             model.31.m               1 1 55 56 ceil_mode=False dilation=(1,1) kernel_size=(5,5) padding=(2,2) return_indices=False stride=(1,1) #55=(1,256,20,20)f32 #56=(1,256,20,20)f32
-nn.MaxPool2d             model.32.m               1 1 55 57 ceil_mode=False dilation=(1,1) kernel_size=(9,9) padding=(4,4) return_indices=False stride=(1,1) #55=(1,256,20,20)f32 #57=(1,256,20,20)f32
-nn.MaxPool2d             model.33.m               1 1 55 58 ceil_mode=False dilation=(1,1) kernel_size=(13,13) padding=(6,6) return_indices=False stride=(1,1) #55=(1,256,20,20)f32 #58=(1,256,20,20)f32
+nn.Conv2d                0.model.28.conv          1 1 49 50 bias=True dilation=(1,1) groups=1 in_channels=1024 kernel_size=(1,1) out_channels=512 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,1024,1,1)f32 #49=(1,1024,20,20)f32 #50=(1,512,20,20)f32
+nn.LeakyReLU             0.model.28.act           1 1 50 51 negative_slope=1.000000e-01 #50=(1,512,20,20)f32 #51=(1,512,20,20)f32
+nn.Conv2d                0.model.29.conv          1 1 51 52 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,512,1,1)f32 #51=(1,512,20,20)f32 #52=(1,256,20,20)f32
+nn.LeakyReLU             0.model.29.act           1 1 52 53 negative_slope=1.000000e-01 #52=(1,256,20,20)f32 #53=(1,256,20,20)f32
+nn.Conv2d                0.model.30.conv          1 1 51 54 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,512,1,1)f32 #51=(1,512,20,20)f32 #54=(1,256,20,20)f32
+nn.LeakyReLU             0.model.30.act           1 1 54 55 negative_slope=1.000000e-01 #54=(1,256,20,20)f32 #55=(1,256,20,20)f32
+nn.MaxPool2d             0.model.31.m             1 1 55 56 ceil_mode=False dilation=(1,1) kernel_size=(5,5) padding=(2,2) return_indices=False stride=(1,1) #55=(1,256,20,20)f32 #56=(1,256,20,20)f32
+nn.MaxPool2d             0.model.32.m             1 1 55 57 ceil_mode=False dilation=(1,1) kernel_size=(9,9) padding=(4,4) return_indices=False stride=(1,1) #55=(1,256,20,20)f32 #57=(1,256,20,20)f32
+nn.MaxPool2d             0.model.33.m             1 1 55 58 ceil_mode=False dilation=(1,1) kernel_size=(13,13) padding=(6,6) return_indices=False stride=(1,1) #55=(1,256,20,20)f32 #58=(1,256,20,20)f32
 torch.cat                torch.cat_130            4 1 58 57 56 55 59 dim=1 #58=(1,256,20,20)f32 #57=(1,256,20,20)f32 #56=(1,256,20,20)f32 #55=(1,256,20,20)f32 #59=(1,1024,20,20)f32
-nn.Conv2d                model.35.conv            1 1 59 60 bias=True dilation=(1,1) groups=1 in_channels=1024 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,1024,1,1)f32 #59=(1,1024,20,20)f32 #60=(1,256,20,20)f32
-nn.LeakyReLU             model.35.act             1 1 60 61 negative_slope=1.000000e-01 #60=(1,256,20,20)f32 #61=(1,256,20,20)f32
+nn.Conv2d                0.model.35.conv          1 1 59 60 bias=True dilation=(1,1) groups=1 in_channels=1024 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,1024,1,1)f32 #59=(1,1024,20,20)f32 #60=(1,256,20,20)f32
+nn.LeakyReLU             0.model.35.act           1 1 60 61 negative_slope=1.000000e-01 #60=(1,256,20,20)f32 #61=(1,256,20,20)f32
 torch.cat                torch.cat_131            2 1 61 53 62 dim=1 #61=(1,256,20,20)f32 #53=(1,256,20,20)f32 #62=(1,512,20,20)f32
-nn.Conv2d                model.37.conv            1 1 62 63 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,512,1,1)f32 #62=(1,512,20,20)f32 #63=(1,256,20,20)f32
-nn.LeakyReLU             model.37.act             1 1 63 64 negative_slope=1.000000e-01 #63=(1,256,20,20)f32 #64=(1,256,20,20)f32
-nn.Conv2d                model.38.conv            1 1 64 65 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,256,1,1)f32 #64=(1,256,20,20)f32 #65=(1,128,20,20)f32
-nn.LeakyReLU             model.38.act             1 1 65 66 negative_slope=1.000000e-01 #65=(1,128,20,20)f32 #66=(1,128,20,20)f32
-nn.Upsample              model.39                 1 1 66 67 mode=nearest scale_factor=(2.000000e+00,2.000000e+00) size=None #66=(1,128,20,20)f32 #67=(1,128,40,40)f32
-nn.Conv2d                model.40.conv            1 1 39 68 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,256,1,1)f32 #39=(1,256,40,40)f32 #68=(1,128,40,40)f32
-nn.LeakyReLU             model.40.act             1 1 68 69 negative_slope=1.000000e-01 #68=(1,128,40,40)f32 #69=(1,128,40,40)f32
+nn.Conv2d                0.model.37.conv          1 1 62 63 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,512,1,1)f32 #62=(1,512,20,20)f32 #63=(1,256,20,20)f32
+nn.LeakyReLU             0.model.37.act           1 1 63 64 negative_slope=1.000000e-01 #63=(1,256,20,20)f32 #64=(1,256,20,20)f32
+nn.Conv2d                0.model.38.conv          1 1 64 65 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,256,1,1)f32 #64=(1,256,20,20)f32 #65=(1,128,20,20)f32
+nn.LeakyReLU             0.model.38.act           1 1 65 66 negative_slope=1.000000e-01 #65=(1,128,20,20)f32 #66=(1,128,20,20)f32
+nn.Upsample              0.model.39               1 1 66 67 mode=nearest scale_factor=(2.000000e+00,2.000000e+00) size=None #66=(1,128,20,20)f32 #67=(1,128,40,40)f32
+nn.Conv2d                0.model.40.conv          1 1 39 68 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,256,1,1)f32 #39=(1,256,40,40)f32 #68=(1,128,40,40)f32
+nn.LeakyReLU             0.model.40.act           1 1 68 69 negative_slope=1.000000e-01 #68=(1,128,40,40)f32 #69=(1,128,40,40)f32
 torch.cat                torch.cat_132            2 1 69 67 70 dim=1 #69=(1,128,40,40)f32 #67=(1,128,40,40)f32 #70=(1,256,40,40)f32
-nn.Conv2d                model.42.conv            1 1 70 71 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,256,1,1)f32 #70=(1,256,40,40)f32 #71=(1,64,40,40)f32
-nn.LeakyReLU             model.42.act             1 1 71 72 negative_slope=1.000000e-01 #71=(1,64,40,40)f32 #72=(1,64,40,40)f32
-nn.Conv2d                model.43.conv            1 1 70 73 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,256,1,1)f32 #70=(1,256,40,40)f32 #73=(1,64,40,40)f32
-nn.LeakyReLU             model.43.act             1 1 73 74 negative_slope=1.000000e-01 #73=(1,64,40,40)f32 #74=(1,64,40,40)f32
-nn.Conv2d                model.44.conv            1 1 74 75 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,3,3)f32 #74=(1,64,40,40)f32 #75=(1,64,40,40)f32
-nn.LeakyReLU             model.44.act             1 1 75 76 negative_slope=1.000000e-01 #75=(1,64,40,40)f32 #76=(1,64,40,40)f32
-nn.Conv2d                model.45.conv            1 1 76 77 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,3,3)f32 #76=(1,64,40,40)f32 #77=(1,64,40,40)f32
-nn.LeakyReLU             model.45.act             1 1 77 78 negative_slope=1.000000e-01 #77=(1,64,40,40)f32 #78=(1,64,40,40)f32
+nn.Conv2d                0.model.42.conv          1 1 70 71 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,256,1,1)f32 #70=(1,256,40,40)f32 #71=(1,64,40,40)f32
+nn.LeakyReLU             0.model.42.act           1 1 71 72 negative_slope=1.000000e-01 #71=(1,64,40,40)f32 #72=(1,64,40,40)f32
+nn.Conv2d                0.model.43.conv          1 1 70 73 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,256,1,1)f32 #70=(1,256,40,40)f32 #73=(1,64,40,40)f32
+nn.LeakyReLU             0.model.43.act           1 1 73 74 negative_slope=1.000000e-01 #73=(1,64,40,40)f32 #74=(1,64,40,40)f32
+nn.Conv2d                0.model.44.conv          1 1 74 75 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,3,3)f32 #74=(1,64,40,40)f32 #75=(1,64,40,40)f32
+nn.LeakyReLU             0.model.44.act           1 1 75 76 negative_slope=1.000000e-01 #75=(1,64,40,40)f32 #76=(1,64,40,40)f32
+nn.Conv2d                0.model.45.conv          1 1 76 77 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,3,3)f32 #76=(1,64,40,40)f32 #77=(1,64,40,40)f32
+nn.LeakyReLU             0.model.45.act           1 1 77 78 negative_slope=1.000000e-01 #77=(1,64,40,40)f32 #78=(1,64,40,40)f32
 torch.cat                torch.cat_133            4 1 78 76 74 72 79 dim=1 #78=(1,64,40,40)f32 #76=(1,64,40,40)f32 #74=(1,64,40,40)f32 #72=(1,64,40,40)f32 #79=(1,256,40,40)f32
-nn.Conv2d                model.47.conv            1 1 79 80 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,256,1,1)f32 #79=(1,256,40,40)f32 #80=(1,128,40,40)f32
-nn.LeakyReLU             model.47.act             1 1 80 81 negative_slope=1.000000e-01 #80=(1,128,40,40)f32 #81=(1,128,40,40)f32
-nn.Conv2d                model.48.conv            1 1 81 82 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,128,1,1)f32 #81=(1,128,40,40)f32 #82=(1,64,40,40)f32
-nn.LeakyReLU             model.48.act             1 1 82 83 negative_slope=1.000000e-01 #82=(1,64,40,40)f32 #83=(1,64,40,40)f32
-nn.Upsample              model.49                 1 1 83 84 mode=nearest scale_factor=(2.000000e+00,2.000000e+00) size=None #83=(1,64,40,40)f32 #84=(1,64,80,80)f32
-nn.Conv2d                model.50.conv            1 1 27 85 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,128,1,1)f32 #27=(1,128,80,80)f32 #85=(1,64,80,80)f32
-nn.LeakyReLU             model.50.act             1 1 85 86 negative_slope=1.000000e-01 #85=(1,64,80,80)f32 #86=(1,64,80,80)f32
+nn.Conv2d                0.model.47.conv          1 1 79 80 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,256,1,1)f32 #79=(1,256,40,40)f32 #80=(1,128,40,40)f32
+nn.LeakyReLU             0.model.47.act           1 1 80 81 negative_slope=1.000000e-01 #80=(1,128,40,40)f32 #81=(1,128,40,40)f32
+nn.Conv2d                0.model.48.conv          1 1 81 82 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,128,1,1)f32 #81=(1,128,40,40)f32 #82=(1,64,40,40)f32
+nn.LeakyReLU             0.model.48.act           1 1 82 83 negative_slope=1.000000e-01 #82=(1,64,40,40)f32 #83=(1,64,40,40)f32
+nn.Upsample              0.model.49               1 1 83 84 mode=nearest scale_factor=(2.000000e+00,2.000000e+00) size=None #83=(1,64,40,40)f32 #84=(1,64,80,80)f32
+nn.Conv2d                0.model.50.conv          1 1 27 85 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,128,1,1)f32 #27=(1,128,80,80)f32 #85=(1,64,80,80)f32
+nn.LeakyReLU             0.model.50.act           1 1 85 86 negative_slope=1.000000e-01 #85=(1,64,80,80)f32 #86=(1,64,80,80)f32
 torch.cat                torch.cat_134            2 1 86 84 87 dim=1 #86=(1,64,80,80)f32 #84=(1,64,80,80)f32 #87=(1,128,80,80)f32
-nn.Conv2d                model.52.conv            1 1 87 88 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=32 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,128,1,1)f32 #87=(1,128,80,80)f32 #88=(1,32,80,80)f32
-nn.LeakyReLU             model.52.act             1 1 88 89 negative_slope=1.000000e-01 #88=(1,32,80,80)f32 #89=(1,32,80,80)f32
-nn.Conv2d                model.53.conv            1 1 87 90 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=32 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,128,1,1)f32 #87=(1,128,80,80)f32 #90=(1,32,80,80)f32
-nn.LeakyReLU             model.53.act             1 1 90 91 negative_slope=1.000000e-01 #90=(1,32,80,80)f32 #91=(1,32,80,80)f32
-nn.Conv2d                model.54.conv            1 1 91 92 bias=True dilation=(1,1) groups=1 in_channels=32 kernel_size=(3,3) out_channels=32 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,32,3,3)f32 #91=(1,32,80,80)f32 #92=(1,32,80,80)f32
-nn.LeakyReLU             model.54.act             1 1 92 93 negative_slope=1.000000e-01 #92=(1,32,80,80)f32 #93=(1,32,80,80)f32
-nn.Conv2d                model.55.conv            1 1 93 94 bias=True dilation=(1,1) groups=1 in_channels=32 kernel_size=(3,3) out_channels=32 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,32,3,3)f32 #93=(1,32,80,80)f32 #94=(1,32,80,80)f32
-nn.LeakyReLU             model.55.act             1 1 94 95 negative_slope=1.000000e-01 #94=(1,32,80,80)f32 #95=(1,32,80,80)f32
+nn.Conv2d                0.model.52.conv          1 1 87 88 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=32 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,128,1,1)f32 #87=(1,128,80,80)f32 #88=(1,32,80,80)f32
+nn.LeakyReLU             0.model.52.act           1 1 88 89 negative_slope=1.000000e-01 #88=(1,32,80,80)f32 #89=(1,32,80,80)f32
+nn.Conv2d                0.model.53.conv          1 1 87 90 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=32 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,128,1,1)f32 #87=(1,128,80,80)f32 #90=(1,32,80,80)f32
+nn.LeakyReLU             0.model.53.act           1 1 90 91 negative_slope=1.000000e-01 #90=(1,32,80,80)f32 #91=(1,32,80,80)f32
+nn.Conv2d                0.model.54.conv          1 1 91 92 bias=True dilation=(1,1) groups=1 in_channels=32 kernel_size=(3,3) out_channels=32 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,32,3,3)f32 #91=(1,32,80,80)f32 #92=(1,32,80,80)f32
+nn.LeakyReLU             0.model.54.act           1 1 92 93 negative_slope=1.000000e-01 #92=(1,32,80,80)f32 #93=(1,32,80,80)f32
+nn.Conv2d                0.model.55.conv          1 1 93 94 bias=True dilation=(1,1) groups=1 in_channels=32 kernel_size=(3,3) out_channels=32 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,32,3,3)f32 #93=(1,32,80,80)f32 #94=(1,32,80,80)f32
+nn.LeakyReLU             0.model.55.act           1 1 94 95 negative_slope=1.000000e-01 #94=(1,32,80,80)f32 #95=(1,32,80,80)f32
 torch.cat                torch.cat_135            4 1 95 93 91 89 96 dim=1 #95=(1,32,80,80)f32 #93=(1,32,80,80)f32 #91=(1,32,80,80)f32 #89=(1,32,80,80)f32 #96=(1,128,80,80)f32
-nn.Conv2d                model.57.conv            1 1 96 97 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,128,1,1)f32 #96=(1,128,80,80)f32 #97=(1,64,80,80)f32
-nn.LeakyReLU             model.57.act             1 1 97 98 negative_slope=1.000000e-01 #97=(1,64,80,80)f32 #98=(1,64,80,80)f32
-nn.Conv2d                model.58.conv            1 1 98 99 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(2,2) @bias=(128)f32 @weight=(128,64,3,3)f32 #98=(1,64,80,80)f32 #99=(1,128,40,40)f32
-nn.LeakyReLU             model.58.act             1 1 99 100 negative_slope=1.000000e-01 #99=(1,128,40,40)f32 #100=(1,128,40,40)f32
+nn.Conv2d                0.model.57.conv          1 1 96 97 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,128,1,1)f32 #96=(1,128,80,80)f32 #97=(1,64,80,80)f32
+nn.LeakyReLU             0.model.57.act           1 1 97 98 negative_slope=1.000000e-01 #97=(1,64,80,80)f32 #98=(1,64,80,80)f32
+nn.Conv2d                0.model.58.conv          1 1 98 99 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(2,2) @bias=(128)f32 @weight=(128,64,3,3)f32 #98=(1,64,80,80)f32 #99=(1,128,40,40)f32
+nn.LeakyReLU             0.model.58.act           1 1 99 100 negative_slope=1.000000e-01 #99=(1,128,40,40)f32 #100=(1,128,40,40)f32
 torch.cat                torch.cat_136            2 1 100 81 101 dim=1 #100=(1,128,40,40)f32 #81=(1,128,40,40)f32 #101=(1,256,40,40)f32
-nn.Conv2d                model.60.conv            1 1 101 102 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,256,1,1)f32 #101=(1,256,40,40)f32 #102=(1,64,40,40)f32
-nn.LeakyReLU             model.60.act             1 1 102 103 negative_slope=1.000000e-01 #102=(1,64,40,40)f32 #103=(1,64,40,40)f32
-nn.Conv2d                model.61.conv            1 1 101 104 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,256,1,1)f32 #101=(1,256,40,40)f32 #104=(1,64,40,40)f32
-nn.LeakyReLU             model.61.act             1 1 104 105 negative_slope=1.000000e-01 #104=(1,64,40,40)f32 #105=(1,64,40,40)f32
-nn.Conv2d                model.62.conv            1 1 105 106 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,3,3)f32 #105=(1,64,40,40)f32 #106=(1,64,40,40)f32
-nn.LeakyReLU             model.62.act             1 1 106 107 negative_slope=1.000000e-01 #106=(1,64,40,40)f32 #107=(1,64,40,40)f32
-nn.Conv2d                model.63.conv            1 1 107 108 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,3,3)f32 #107=(1,64,40,40)f32 #108=(1,64,40,40)f32
-nn.LeakyReLU             model.63.act             1 1 108 109 negative_slope=1.000000e-01 #108=(1,64,40,40)f32 #109=(1,64,40,40)f32
+nn.Conv2d                0.model.60.conv          1 1 101 102 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,256,1,1)f32 #101=(1,256,40,40)f32 #102=(1,64,40,40)f32
+nn.LeakyReLU             0.model.60.act           1 1 102 103 negative_slope=1.000000e-01 #102=(1,64,40,40)f32 #103=(1,64,40,40)f32
+nn.Conv2d                0.model.61.conv          1 1 101 104 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,256,1,1)f32 #101=(1,256,40,40)f32 #104=(1,64,40,40)f32
+nn.LeakyReLU             0.model.61.act           1 1 104 105 negative_slope=1.000000e-01 #104=(1,64,40,40)f32 #105=(1,64,40,40)f32
+nn.Conv2d                0.model.62.conv          1 1 105 106 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,3,3)f32 #105=(1,64,40,40)f32 #106=(1,64,40,40)f32
+nn.LeakyReLU             0.model.62.act           1 1 106 107 negative_slope=1.000000e-01 #106=(1,64,40,40)f32 #107=(1,64,40,40)f32
+nn.Conv2d                0.model.63.conv          1 1 107 108 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,3,3)f32 #107=(1,64,40,40)f32 #108=(1,64,40,40)f32
+nn.LeakyReLU             0.model.63.act           1 1 108 109 negative_slope=1.000000e-01 #108=(1,64,40,40)f32 #109=(1,64,40,40)f32
 torch.cat                torch.cat_137            4 1 109 107 105 103 110 dim=1 #109=(1,64,40,40)f32 #107=(1,64,40,40)f32 #105=(1,64,40,40)f32 #103=(1,64,40,40)f32 #110=(1,256,40,40)f32
-nn.Conv2d                model.65.conv            1 1 110 111 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,256,1,1)f32 #110=(1,256,40,40)f32 #111=(1,128,40,40)f32
-nn.LeakyReLU             model.65.act             1 1 111 112 negative_slope=1.000000e-01 #111=(1,128,40,40)f32 #112=(1,128,40,40)f32
-nn.Conv2d                model.66.conv            1 1 112 113 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(2,2) @bias=(256)f32 @weight=(256,128,3,3)f32 #112=(1,128,40,40)f32 #113=(1,256,20,20)f32
-nn.LeakyReLU             model.66.act             1 1 113 114 negative_slope=1.000000e-01 #113=(1,256,20,20)f32 #114=(1,256,20,20)f32
+nn.Conv2d                0.model.65.conv          1 1 110 111 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,256,1,1)f32 #110=(1,256,40,40)f32 #111=(1,128,40,40)f32
+nn.LeakyReLU             0.model.65.act           1 1 111 112 negative_slope=1.000000e-01 #111=(1,128,40,40)f32 #112=(1,128,40,40)f32
+nn.Conv2d                0.model.66.conv          1 1 112 113 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(2,2) @bias=(256)f32 @weight=(256,128,3,3)f32 #112=(1,128,40,40)f32 #113=(1,256,20,20)f32
+nn.LeakyReLU             0.model.66.act           1 1 113 114 negative_slope=1.000000e-01 #113=(1,256,20,20)f32 #114=(1,256,20,20)f32
 torch.cat                torch.cat_138            2 1 114 64 115 dim=1 #114=(1,256,20,20)f32 #64=(1,256,20,20)f32 #115=(1,512,20,20)f32
-nn.Conv2d                model.68.conv            1 1 115 116 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,512,1,1)f32 #115=(1,512,20,20)f32 #116=(1,128,20,20)f32
-nn.LeakyReLU             model.68.act             1 1 116 117 negative_slope=1.000000e-01 #116=(1,128,20,20)f32 #117=(1,128,20,20)f32
-nn.Conv2d                model.69.conv            1 1 115 118 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,512,1,1)f32 #115=(1,512,20,20)f32 #118=(1,128,20,20)f32
-nn.LeakyReLU             model.69.act             1 1 118 119 negative_slope=1.000000e-01 #118=(1,128,20,20)f32 #119=(1,128,20,20)f32
-nn.Conv2d                model.70.conv            1 1 119 120 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,3,3)f32 #119=(1,128,20,20)f32 #120=(1,128,20,20)f32
-nn.LeakyReLU             model.70.act             1 1 120 121 negative_slope=1.000000e-01 #120=(1,128,20,20)f32 #121=(1,128,20,20)f32
-nn.Conv2d                model.71.conv            1 1 121 122 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,3,3)f32 #121=(1,128,20,20)f32 #122=(1,128,20,20)f32
-nn.LeakyReLU             model.71.act             1 1 122 123 negative_slope=1.000000e-01 #122=(1,128,20,20)f32 #123=(1,128,20,20)f32
+nn.Conv2d                0.model.68.conv          1 1 115 116 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,512,1,1)f32 #115=(1,512,20,20)f32 #116=(1,128,20,20)f32
+nn.LeakyReLU             0.model.68.act           1 1 116 117 negative_slope=1.000000e-01 #116=(1,128,20,20)f32 #117=(1,128,20,20)f32
+nn.Conv2d                0.model.69.conv          1 1 115 118 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,512,1,1)f32 #115=(1,512,20,20)f32 #118=(1,128,20,20)f32
+nn.LeakyReLU             0.model.69.act           1 1 118 119 negative_slope=1.000000e-01 #118=(1,128,20,20)f32 #119=(1,128,20,20)f32
+nn.Conv2d                0.model.70.conv          1 1 119 120 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,3,3)f32 #119=(1,128,20,20)f32 #120=(1,128,20,20)f32
+nn.LeakyReLU             0.model.70.act           1 1 120 121 negative_slope=1.000000e-01 #120=(1,128,20,20)f32 #121=(1,128,20,20)f32
+nn.Conv2d                0.model.71.conv          1 1 121 122 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,3,3)f32 #121=(1,128,20,20)f32 #122=(1,128,20,20)f32
+nn.LeakyReLU             0.model.71.act           1 1 122 123 negative_slope=1.000000e-01 #122=(1,128,20,20)f32 #123=(1,128,20,20)f32
 torch.cat                torch.cat_139            4 1 123 121 119 117 124 dim=1 #123=(1,128,20,20)f32 #121=(1,128,20,20)f32 #119=(1,128,20,20)f32 #117=(1,128,20,20)f32 #124=(1,512,20,20)f32
-nn.Conv2d                model.73.conv            1 1 124 125 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,512,1,1)f32 #124=(1,512,20,20)f32 #125=(1,256,20,20)f32
-nn.LeakyReLU             model.73.act             1 1 125 126 negative_slope=1.000000e-01 #125=(1,256,20,20)f32 #126=(1,256,20,20)f32
-nn.Conv2d                model.74.conv            1 1 98 127 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,64,3,3)f32 #98=(1,64,80,80)f32 #127=(1,128,80,80)f32
-nn.LeakyReLU             model.74.act             1 1 127 128 negative_slope=1.000000e-01 #127=(1,128,80,80)f32 #128=(1,128,80,80)f32
-nn.Conv2d                model.75.conv            1 1 112 129 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,128,3,3)f32 #112=(1,128,40,40)f32 #129=(1,256,40,40)f32
-nn.LeakyReLU             model.75.act             1 1 129 130 negative_slope=1.000000e-01 #129=(1,256,40,40)f32 #130=(1,256,40,40)f32
-nn.Conv2d                model.76.conv            1 1 126 131 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(3,3) out_channels=512 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,256,3,3)f32 #126=(1,256,20,20)f32 #131=(1,512,20,20)f32
-nn.LeakyReLU             model.76.act             1 1 131 132 negative_slope=1.000000e-01 #131=(1,512,20,20)f32 #132=(1,512,20,20)f32
+nn.Conv2d                0.model.73.conv          1 1 124 125 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,512,1,1)f32 #124=(1,512,20,20)f32 #125=(1,256,20,20)f32
+nn.LeakyReLU             0.model.73.act           1 1 125 126 negative_slope=1.000000e-01 #125=(1,256,20,20)f32 #126=(1,256,20,20)f32
+nn.Conv2d                0.model.74.conv          1 1 98 127 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,64,3,3)f32 #98=(1,64,80,80)f32 #127=(1,128,80,80)f32
+nn.LeakyReLU             0.model.74.act           1 1 127 128 negative_slope=1.000000e-01 #127=(1,128,80,80)f32 #128=(1,128,80,80)f32
+nn.Conv2d                0.model.75.conv          1 1 112 129 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,128,3,3)f32 #112=(1,128,40,40)f32 #129=(1,256,40,40)f32
+nn.LeakyReLU             0.model.75.act           1 1 129 130 negative_slope=1.000000e-01 #129=(1,256,40,40)f32 #130=(1,256,40,40)f32
+nn.Conv2d                0.model.76.conv          1 1 126 131 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(3,3) out_channels=512 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,256,3,3)f32 #126=(1,256,20,20)f32 #131=(1,512,20,20)f32
+nn.LeakyReLU             0.model.76.act           1 1 131 132 negative_slope=1.000000e-01 #131=(1,512,20,20)f32 #132=(1,512,20,20)f32
 pnnx.Attribute           pnnx_46                  0 1 133 @pnnx_46=(3)f32 #133=(3)f32
-pnnx.Attribute           model.77.ia.0            0 1 134 @implicit=(1,128,1,1)f32 #134=(1,128,1,1)f32
+pnnx.Attribute           0.model.77.ia.0          0 1 134 @implicit=(1,128,1,1)f32 #134=(1,128,1,1)f32
 Tensor.repeat            Tensor.repeat_39         1 1 134 135 sizes=(1,1,80,80) $input=134 #134=(1,128,1,1)f32 #135=(1,128,80,80)f32
 BinaryOp                 add_0                    2 1 135 128 136 0=0 #135=(1,128,80,80)f32 #128=(1,128,80,80)f32 #136=(1,128,80,80)f32
-nn.Conv2d                model.77.m.0             1 1 136 137 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=18 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(18)f32 @weight=(18,128,1,1)f32 #136=(1,128,80,80)f32 #137=(1,18,80,80)f32
-pnnx.Attribute           model.77.im.0            0 1 138 @implicit=(1,18,1,1)f32 #138=(1,18,1,1)f32
+nn.Conv2d                0.model.77.m.0           1 1 136 137 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=18 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(18)f32 @weight=(18,128,1,1)f32 #136=(1,128,80,80)f32 #137=(1,18,80,80)f32
+pnnx.Attribute           0.model.77.im.0          0 1 138 @implicit=(1,18,1,1)f32 #138=(1,18,1,1)f32
 Tensor.repeat            Tensor.repeat_40         1 1 138 139 sizes=(1,1,80,80) $input=138 #138=(1,18,1,1)f32 #139=(1,18,80,80)f32
 BinaryOp                 mul_1                    2 1 139 137 140 0=2 #139=(1,18,80,80)f32 #137=(1,18,80,80)f32 #140=(1,18,80,80)f32
-nn.Conv2d                model.77.m_kpt.0.0.conv  1 1 128 141 bias=True dilation=(1,1) groups=128 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,1,3,3)f32 #128=(1,128,80,80)f32 #141=(1,128,80,80)f32
+nn.Conv2d                0.model.77.m_kpt.0.0.conv 1 1 128 141 bias=True dilation=(1,1) groups=128 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,1,3,3)f32 #128=(1,128,80,80)f32 #141=(1,128,80,80)f32
 F.silu                   F.silu_0                 1 1 141 142 $input=141 #141=(1,128,80,80)f32 #142=(1,128,80,80)f32
-nn.Conv2d                model.77.m_kpt.0.1.conv  1 1 142 143 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,1,1)f32 #142=(1,128,80,80)f32 #143=(1,128,80,80)f32
+nn.Conv2d                0.model.77.m_kpt.0.1.conv 1 1 142 143 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,1,1)f32 #142=(1,128,80,80)f32 #143=(1,128,80,80)f32
 F.silu                   F.silu_1                 1 1 143 144 $input=143 #143=(1,128,80,80)f32 #144=(1,128,80,80)f32
-nn.Conv2d                model.77.m_kpt.0.2.conv  1 1 144 145 bias=True dilation=(1,1) groups=128 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,1,3,3)f32 #144=(1,128,80,80)f32 #145=(1,128,80,80)f32
+nn.Conv2d                0.model.77.m_kpt.0.2.conv 1 1 144 145 bias=True dilation=(1,1) groups=128 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,1,3,3)f32 #144=(1,128,80,80)f32 #145=(1,128,80,80)f32
 F.silu                   F.silu_2                 1 1 145 146 $input=145 #145=(1,128,80,80)f32 #146=(1,128,80,80)f32
-nn.Conv2d                model.77.m_kpt.0.3.conv  1 1 146 147 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,1,1)f32 #146=(1,128,80,80)f32 #147=(1,128,80,80)f32
+nn.Conv2d                0.model.77.m_kpt.0.3.conv 1 1 146 147 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,1,1)f32 #146=(1,128,80,80)f32 #147=(1,128,80,80)f32
 F.silu                   F.silu_3                 1 1 147 148 $input=147 #147=(1,128,80,80)f32 #148=(1,128,80,80)f32
-nn.Conv2d                model.77.m_kpt.0.4.conv  1 1 148 149 bias=True dilation=(1,1) groups=128 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,1,3,3)f32 #148=(1,128,80,80)f32 #149=(1,128,80,80)f32
+nn.Conv2d                0.model.77.m_kpt.0.4.conv 1 1 148 149 bias=True dilation=(1,1) groups=128 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,1,3,3)f32 #148=(1,128,80,80)f32 #149=(1,128,80,80)f32
 F.silu                   F.silu_4                 1 1 149 150 $input=149 #149=(1,128,80,80)f32 #150=(1,128,80,80)f32
-nn.Conv2d                model.77.m_kpt.0.5.conv  1 1 150 151 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,1,1)f32 #150=(1,128,80,80)f32 #151=(1,128,80,80)f32
+nn.Conv2d                0.model.77.m_kpt.0.5.conv 1 1 150 151 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,1,1)f32 #150=(1,128,80,80)f32 #151=(1,128,80,80)f32
 F.silu                   F.silu_5                 1 1 151 152 $input=151 #151=(1,128,80,80)f32 #152=(1,128,80,80)f32
-nn.Conv2d                model.77.m_kpt.0.6.conv  1 1 152 153 bias=True dilation=(1,1) groups=128 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,1,3,3)f32 #152=(1,128,80,80)f32 #153=(1,128,80,80)f32
+nn.Conv2d                0.model.77.m_kpt.0.6.conv 1 1 152 153 bias=True dilation=(1,1) groups=128 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,1,3,3)f32 #152=(1,128,80,80)f32 #153=(1,128,80,80)f32
 F.silu                   F.silu_6                 1 1 153 154 $input=153 #153=(1,128,80,80)f32 #154=(1,128,80,80)f32
-nn.Conv2d                model.77.m_kpt.0.7.conv  1 1 154 155 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,1,1)f32 #154=(1,128,80,80)f32 #155=(1,128,80,80)f32
+nn.Conv2d                0.model.77.m_kpt.0.7.conv 1 1 154 155 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,1,1)f32 #154=(1,128,80,80)f32 #155=(1,128,80,80)f32
 F.silu                   F.silu_7                 1 1 155 156 $input=155 #155=(1,128,80,80)f32 #156=(1,128,80,80)f32
-nn.Conv2d                model.77.m_kpt.0.8.conv  1 1 156 157 bias=True dilation=(1,1) groups=128 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,1,3,3)f32 #156=(1,128,80,80)f32 #157=(1,128,80,80)f32
+nn.Conv2d                0.model.77.m_kpt.0.8.conv 1 1 156 157 bias=True dilation=(1,1) groups=128 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,1,3,3)f32 #156=(1,128,80,80)f32 #157=(1,128,80,80)f32
 F.silu                   F.silu_8                 1 1 157 158 $input=157 #157=(1,128,80,80)f32 #158=(1,128,80,80)f32
-nn.Conv2d                model.77.m_kpt.0.9.conv  1 1 158 159 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,1,1)f32 #158=(1,128,80,80)f32 #159=(1,128,80,80)f32
+nn.Conv2d                0.model.77.m_kpt.0.9.conv 1 1 158 159 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,1,1)f32 #158=(1,128,80,80)f32 #159=(1,128,80,80)f32
 F.silu                   F.silu_9                 1 1 159 160 $input=159 #159=(1,128,80,80)f32 #160=(1,128,80,80)f32
-nn.Conv2d                model.77.m_kpt.0.10.conv 1 1 160 161 bias=True dilation=(1,1) groups=128 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,1,3,3)f32 #160=(1,128,80,80)f32 #161=(1,128,80,80)f32
+nn.Conv2d                0.model.77.m_kpt.0.10.conv 1 1 160 161 bias=True dilation=(1,1) groups=128 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,1,3,3)f32 #160=(1,128,80,80)f32 #161=(1,128,80,80)f32
 F.silu                   F.silu_10                1 1 161 162 $input=161 #161=(1,128,80,80)f32 #162=(1,128,80,80)f32
-nn.Conv2d                model.77.m_kpt.0.11      1 1 162 163 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=45 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(45)f32 @weight=(45,128,1,1)f32 #162=(1,128,80,80)f32 #163=(1,45,80,80)f32
+nn.Conv2d                0.model.77.m_kpt.0.11    1 1 162 163 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=45 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(45)f32 @weight=(45,128,1,1)f32 #162=(1,128,80,80)f32 #163=(1,45,80,80)f32
 torch.cat                torch.cat_140            2 1 140 163 164 dim=1 #140=(1,18,80,80)f32 #163=(1,45,80,80)f32 #164=(1,63,80,80)f32
 Tensor.view              Tensor.view_102          1 1 164 165 shape=(1,3,21,80,80) $input=164 #164=(1,63,80,80)f32 #165=(1,3,21,80,80)f32
 torch.permute            torch.permute_147        1 1 165 166 dims=(0,1,3,4,2) $input=165 #165=(1,3,21,80,80)f32 #166=(1,3,80,80,21)f32
@@ -177,41 +177,41 @@ BinaryOp                 mul_2                    1 1 173 176 0=2 1=1 2=2.000000
 BinaryOp                 sub_3                    1 1 176 177 0=1 1=1 2=5.000000e-01
 BinaryOp                 add_4                    2 1 177 171 178 0=0 #171=(1,1,6400,2)f32
 BinaryOp                 mul_5                    2 1 178 172 179 0=2 #179=(1,3,6400,2)f32
-pnnx.Attribute           pnnx_fold_1026           0 1 180 @pnnx_fold_1026=(1,3,1,2)f32 #180=(1,3,1,2)f32
+pnnx.Attribute           pnnx_fold_634            0 1 180 @pnnx_fold_634=(1,3,1,2)f32 #180=(1,3,1,2)f32
 BinaryOp                 mul_6                    1 1 174 181 0=2 1=1 2=2.000000e+00 #174=(1,3,6400,2)f32
 BinaryOp                 pow_7                    1 1 181 182 0=6 1=1 2=2.000000e+00
 BinaryOp                 mul_8                    2 1 182 180 183 0=2 #180=(1,3,1,2)f32 #183=(1,3,6400,2)f32
 Tensor.view              Tensor.view_108          1 1 168 184 shape=(1,3,-1,15) $input=168 #168=(1,3,80,80,15)f32 #184=(1,3,6400,15)f32
-pnnx.Attribute           model.77.ia.1            0 1 185 @implicit=(1,256,1,1)f32 #185=(1,256,1,1)f32
+pnnx.Attribute           0.model.77.ia.1          0 1 185 @implicit=(1,256,1,1)f32 #185=(1,256,1,1)f32
 Tensor.repeat            Tensor.repeat_43         1 1 185 186 sizes=(1,1,40,40) $input=185 #185=(1,256,1,1)f32 #186=(1,256,40,40)f32
 BinaryOp                 add_9                    2 1 186 130 187 0=0 #186=(1,256,40,40)f32 #130=(1,256,40,40)f32 #187=(1,256,40,40)f32
-nn.Conv2d                model.77.m.1             1 1 187 188 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=18 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(18)f32 @weight=(18,256,1,1)f32 #187=(1,256,40,40)f32 #188=(1,18,40,40)f32
-pnnx.Attribute           model.77.im.1            0 1 189 @implicit=(1,18,1,1)f32 #189=(1,18,1,1)f32
+nn.Conv2d                0.model.77.m.1           1 1 187 188 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=18 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(18)f32 @weight=(18,256,1,1)f32 #187=(1,256,40,40)f32 #188=(1,18,40,40)f32
+pnnx.Attribute           0.model.77.im.1          0 1 189 @implicit=(1,18,1,1)f32 #189=(1,18,1,1)f32
 Tensor.repeat            Tensor.repeat_44         1 1 189 190 sizes=(1,1,40,40) $input=189 #189=(1,18,1,1)f32 #190=(1,18,40,40)f32
 BinaryOp                 mul_10                   2 1 190 188 191 0=2 #190=(1,18,40,40)f32 #188=(1,18,40,40)f32 #191=(1,18,40,40)f32
-nn.Conv2d                model.77.m_kpt.1.0.conv  1 1 130 192 bias=True dilation=(1,1) groups=256 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,1,3,3)f32 #130=(1,256,40,40)f32 #192=(1,256,40,40)f32
+nn.Conv2d                0.model.77.m_kpt.1.0.conv 1 1 130 192 bias=True dilation=(1,1) groups=256 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,1,3,3)f32 #130=(1,256,40,40)f32 #192=(1,256,40,40)f32
 F.silu                   F.silu_11                1 1 192 193 $input=192 #192=(1,256,40,40)f32 #193=(1,256,40,40)f32
-nn.Conv2d                model.77.m_kpt.1.1.conv  1 1 193 194 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,1,1)f32 #193=(1,256,40,40)f32 #194=(1,256,40,40)f32
+nn.Conv2d                0.model.77.m_kpt.1.1.conv 1 1 193 194 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,1,1)f32 #193=(1,256,40,40)f32 #194=(1,256,40,40)f32
 F.silu                   F.silu_12                1 1 194 195 $input=194 #194=(1,256,40,40)f32 #195=(1,256,40,40)f32
-nn.Conv2d                model.77.m_kpt.1.2.conv  1 1 195 196 bias=True dilation=(1,1) groups=256 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,1,3,3)f32 #195=(1,256,40,40)f32 #196=(1,256,40,40)f32
+nn.Conv2d                0.model.77.m_kpt.1.2.conv 1 1 195 196 bias=True dilation=(1,1) groups=256 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,1,3,3)f32 #195=(1,256,40,40)f32 #196=(1,256,40,40)f32
 F.silu                   F.silu_13                1 1 196 197 $input=196 #196=(1,256,40,40)f32 #197=(1,256,40,40)f32
-nn.Conv2d                model.77.m_kpt.1.3.conv  1 1 197 198 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,1,1)f32 #197=(1,256,40,40)f32 #198=(1,256,40,40)f32
+nn.Conv2d                0.model.77.m_kpt.1.3.conv 1 1 197 198 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,1,1)f32 #197=(1,256,40,40)f32 #198=(1,256,40,40)f32
 F.silu                   F.silu_14                1 1 198 199 $input=198 #198=(1,256,40,40)f32 #199=(1,256,40,40)f32
-nn.Conv2d                model.77.m_kpt.1.4.conv  1 1 199 200 bias=True dilation=(1,1) groups=256 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,1,3,3)f32 #199=(1,256,40,40)f32 #200=(1,256,40,40)f32
+nn.Conv2d                0.model.77.m_kpt.1.4.conv 1 1 199 200 bias=True dilation=(1,1) groups=256 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,1,3,3)f32 #199=(1,256,40,40)f32 #200=(1,256,40,40)f32
 F.silu                   F.silu_15                1 1 200 201 $input=200 #200=(1,256,40,40)f32 #201=(1,256,40,40)f32
-nn.Conv2d                model.77.m_kpt.1.5.conv  1 1 201 202 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,1,1)f32 #201=(1,256,40,40)f32 #202=(1,256,40,40)f32
+nn.Conv2d                0.model.77.m_kpt.1.5.conv 1 1 201 202 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,1,1)f32 #201=(1,256,40,40)f32 #202=(1,256,40,40)f32
 F.silu                   F.silu_16                1 1 202 203 $input=202 #202=(1,256,40,40)f32 #203=(1,256,40,40)f32
-nn.Conv2d                model.77.m_kpt.1.6.conv  1 1 203 204 bias=True dilation=(1,1) groups=256 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,1,3,3)f32 #203=(1,256,40,40)f32 #204=(1,256,40,40)f32
+nn.Conv2d                0.model.77.m_kpt.1.6.conv 1 1 203 204 bias=True dilation=(1,1) groups=256 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,1,3,3)f32 #203=(1,256,40,40)f32 #204=(1,256,40,40)f32
 F.silu                   F.silu_17                1 1 204 205 $input=204 #204=(1,256,40,40)f32 #205=(1,256,40,40)f32
-nn.Conv2d                model.77.m_kpt.1.7.conv  1 1 205 206 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,1,1)f32 #205=(1,256,40,40)f32 #206=(1,256,40,40)f32
+nn.Conv2d                0.model.77.m_kpt.1.7.conv 1 1 205 206 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,1,1)f32 #205=(1,256,40,40)f32 #206=(1,256,40,40)f32
 F.silu                   F.silu_18                1 1 206 207 $input=206 #206=(1,256,40,40)f32 #207=(1,256,40,40)f32
-nn.Conv2d                model.77.m_kpt.1.8.conv  1 1 207 208 bias=True dilation=(1,1) groups=256 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,1,3,3)f32 #207=(1,256,40,40)f32 #208=(1,256,40,40)f32
+nn.Conv2d                0.model.77.m_kpt.1.8.conv 1 1 207 208 bias=True dilation=(1,1) groups=256 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,1,3,3)f32 #207=(1,256,40,40)f32 #208=(1,256,40,40)f32
 F.silu                   F.silu_19                1 1 208 209 $input=208 #208=(1,256,40,40)f32 #209=(1,256,40,40)f32
-nn.Conv2d                model.77.m_kpt.1.9.conv  1 1 209 210 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,1,1)f32 #209=(1,256,40,40)f32 #210=(1,256,40,40)f32
+nn.Conv2d                0.model.77.m_kpt.1.9.conv 1 1 209 210 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=256 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,256,1,1)f32 #209=(1,256,40,40)f32 #210=(1,256,40,40)f32
 F.silu                   F.silu_20                1 1 210 211 $input=210 #210=(1,256,40,40)f32 #211=(1,256,40,40)f32
-nn.Conv2d                model.77.m_kpt.1.10.conv 1 1 211 212 bias=True dilation=(1,1) groups=256 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,1,3,3)f32 #211=(1,256,40,40)f32 #212=(1,256,40,40)f32
+nn.Conv2d                0.model.77.m_kpt.1.10.conv 1 1 211 212 bias=True dilation=(1,1) groups=256 in_channels=256 kernel_size=(3,3) out_channels=256 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(256)f32 @weight=(256,1,3,3)f32 #211=(1,256,40,40)f32 #212=(1,256,40,40)f32
 F.silu                   F.silu_21                1 1 212 213 $input=212 #212=(1,256,40,40)f32 #213=(1,256,40,40)f32
-nn.Conv2d                model.77.m_kpt.1.11      1 1 213 214 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=45 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(45)f32 @weight=(45,256,1,1)f32 #213=(1,256,40,40)f32 #214=(1,45,40,40)f32
+nn.Conv2d                0.model.77.m_kpt.1.11    1 1 213 214 bias=True dilation=(1,1) groups=1 in_channels=256 kernel_size=(1,1) out_channels=45 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(45)f32 @weight=(45,256,1,1)f32 #213=(1,256,40,40)f32 #214=(1,45,40,40)f32
 torch.cat                torch.cat_142            2 1 191 214 215 dim=1 #191=(1,18,40,40)f32 #214=(1,45,40,40)f32 #215=(1,63,40,40)f32
 Tensor.view              Tensor.view_110          1 1 215 216 shape=(1,3,21,40,40) $input=215 #215=(1,63,40,40)f32 #216=(1,3,21,40,40)f32
 torch.permute            torch.permute_148        1 1 216 217 dims=(0,1,3,4,2) $input=216 #216=(1,3,21,40,40)f32 #217=(1,3,40,40,21)f32
@@ -226,41 +226,41 @@ BinaryOp                 mul_11                   1 1 225 228 0=2 1=1 2=2.000000
 BinaryOp                 sub_12                   1 1 228 229 0=1 1=1 2=5.000000e-01
 BinaryOp                 add_13                   2 1 229 222 230 0=0 #222=(1,1,1600,2)f32
 BinaryOp                 mul_14                   2 1 230 224 231 0=2 #231=(1,3,1600,2)f32
-pnnx.Attribute           pnnx_fold_1196           0 1 232 @pnnx_fold_1196=(1,3,1,2)f32 #232=(1,3,1,2)f32
+pnnx.Attribute           pnnx_fold_804            0 1 232 @pnnx_fold_804=(1,3,1,2)f32 #232=(1,3,1,2)f32
 BinaryOp                 mul_15                   1 1 226 233 0=2 1=1 2=2.000000e+00 #226=(1,3,1600,2)f32
 BinaryOp                 pow_16                   1 1 233 234 0=6 1=1 2=2.000000e+00
 BinaryOp                 mul_17                   2 1 234 232 235 0=2 #232=(1,3,1,2)f32 #235=(1,3,1600,2)f32
 Tensor.view              Tensor.view_116          1 1 219 236 shape=(1,3,-1,15) $input=219 #219=(1,3,40,40,15)f32 #236=(1,3,1600,15)f32
-pnnx.Attribute           model.77.ia.2            0 1 237 @implicit=(1,512,1,1)f32 #237=(1,512,1,1)f32
+pnnx.Attribute           0.model.77.ia.2          0 1 237 @implicit=(1,512,1,1)f32 #237=(1,512,1,1)f32
 Tensor.repeat            Tensor.repeat_47         1 1 237 238 sizes=(1,1,20,20) $input=237 #237=(1,512,1,1)f32 #238=(1,512,20,20)f32
 BinaryOp                 add_18                   2 1 238 132 239 0=0 #238=(1,512,20,20)f32 #132=(1,512,20,20)f32 #239=(1,512,20,20)f32
-nn.Conv2d                model.77.m.2             1 1 239 240 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=18 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(18)f32 @weight=(18,512,1,1)f32 #239=(1,512,20,20)f32 #240=(1,18,20,20)f32
-pnnx.Attribute           model.77.im.2            0 1 241 @implicit=(1,18,1,1)f32 #241=(1,18,1,1)f32
+nn.Conv2d                0.model.77.m.2           1 1 239 240 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=18 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(18)f32 @weight=(18,512,1,1)f32 #239=(1,512,20,20)f32 #240=(1,18,20,20)f32
+pnnx.Attribute           0.model.77.im.2          0 1 241 @implicit=(1,18,1,1)f32 #241=(1,18,1,1)f32
 Tensor.repeat            Tensor.repeat_48         1 1 241 242 sizes=(1,1,20,20) $input=241 #241=(1,18,1,1)f32 #242=(1,18,20,20)f32
 BinaryOp                 mul_19                   2 1 242 240 243 0=2 #242=(1,18,20,20)f32 #240=(1,18,20,20)f32 #243=(1,18,20,20)f32
-nn.Conv2d                model.77.m_kpt.2.0.conv  1 1 132 244 bias=True dilation=(1,1) groups=512 in_channels=512 kernel_size=(3,3) out_channels=512 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,1,3,3)f32 #132=(1,512,20,20)f32 #244=(1,512,20,20)f32
+nn.Conv2d                0.model.77.m_kpt.2.0.conv 1 1 132 244 bias=True dilation=(1,1) groups=512 in_channels=512 kernel_size=(3,3) out_channels=512 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,1,3,3)f32 #132=(1,512,20,20)f32 #244=(1,512,20,20)f32
 F.silu                   F.silu_22                1 1 244 245 $input=244 #244=(1,512,20,20)f32 #245=(1,512,20,20)f32
-nn.Conv2d                model.77.m_kpt.2.1.conv  1 1 245 246 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=512 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,512,1,1)f32 #245=(1,512,20,20)f32 #246=(1,512,20,20)f32
+nn.Conv2d                0.model.77.m_kpt.2.1.conv 1 1 245 246 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=512 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,512,1,1)f32 #245=(1,512,20,20)f32 #246=(1,512,20,20)f32
 F.silu                   F.silu_23                1 1 246 247 $input=246 #246=(1,512,20,20)f32 #247=(1,512,20,20)f32
-nn.Conv2d                model.77.m_kpt.2.2.conv  1 1 247 248 bias=True dilation=(1,1) groups=512 in_channels=512 kernel_size=(3,3) out_channels=512 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,1,3,3)f32 #247=(1,512,20,20)f32 #248=(1,512,20,20)f32
+nn.Conv2d                0.model.77.m_kpt.2.2.conv 1 1 247 248 bias=True dilation=(1,1) groups=512 in_channels=512 kernel_size=(3,3) out_channels=512 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,1,3,3)f32 #247=(1,512,20,20)f32 #248=(1,512,20,20)f32
 F.silu                   F.silu_24                1 1 248 249 $input=248 #248=(1,512,20,20)f32 #249=(1,512,20,20)f32
-nn.Conv2d                model.77.m_kpt.2.3.conv  1 1 249 250 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=512 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,512,1,1)f32 #249=(1,512,20,20)f32 #250=(1,512,20,20)f32
+nn.Conv2d                0.model.77.m_kpt.2.3.conv 1 1 249 250 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=512 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,512,1,1)f32 #249=(1,512,20,20)f32 #250=(1,512,20,20)f32
 F.silu                   F.silu_25                1 1 250 251 $input=250 #250=(1,512,20,20)f32 #251=(1,512,20,20)f32
-nn.Conv2d                model.77.m_kpt.2.4.conv  1 1 251 252 bias=True dilation=(1,1) groups=512 in_channels=512 kernel_size=(3,3) out_channels=512 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,1,3,3)f32 #251=(1,512,20,20)f32 #252=(1,512,20,20)f32
+nn.Conv2d                0.model.77.m_kpt.2.4.conv 1 1 251 252 bias=True dilation=(1,1) groups=512 in_channels=512 kernel_size=(3,3) out_channels=512 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,1,3,3)f32 #251=(1,512,20,20)f32 #252=(1,512,20,20)f32
 F.silu                   F.silu_26                1 1 252 253 $input=252 #252=(1,512,20,20)f32 #253=(1,512,20,20)f32
-nn.Conv2d                model.77.m_kpt.2.5.conv  1 1 253 254 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=512 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,512,1,1)f32 #253=(1,512,20,20)f32 #254=(1,512,20,20)f32
+nn.Conv2d                0.model.77.m_kpt.2.5.conv 1 1 253 254 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=512 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,512,1,1)f32 #253=(1,512,20,20)f32 #254=(1,512,20,20)f32
 F.silu                   F.silu_27                1 1 254 255 $input=254 #254=(1,512,20,20)f32 #255=(1,512,20,20)f32
-nn.Conv2d                model.77.m_kpt.2.6.conv  1 1 255 256 bias=True dilation=(1,1) groups=512 in_channels=512 kernel_size=(3,3) out_channels=512 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,1,3,3)f32 #255=(1,512,20,20)f32 #256=(1,512,20,20)f32
+nn.Conv2d                0.model.77.m_kpt.2.6.conv 1 1 255 256 bias=True dilation=(1,1) groups=512 in_channels=512 kernel_size=(3,3) out_channels=512 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,1,3,3)f32 #255=(1,512,20,20)f32 #256=(1,512,20,20)f32
 F.silu                   F.silu_28                1 1 256 257 $input=256 #256=(1,512,20,20)f32 #257=(1,512,20,20)f32
-nn.Conv2d                model.77.m_kpt.2.7.conv  1 1 257 258 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=512 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,512,1,1)f32 #257=(1,512,20,20)f32 #258=(1,512,20,20)f32
+nn.Conv2d                0.model.77.m_kpt.2.7.conv 1 1 257 258 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=512 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,512,1,1)f32 #257=(1,512,20,20)f32 #258=(1,512,20,20)f32
 F.silu                   F.silu_29                1 1 258 259 $input=258 #258=(1,512,20,20)f32 #259=(1,512,20,20)f32
-nn.Conv2d                model.77.m_kpt.2.8.conv  1 1 259 260 bias=True dilation=(1,1) groups=512 in_channels=512 kernel_size=(3,3) out_channels=512 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,1,3,3)f32 #259=(1,512,20,20)f32 #260=(1,512,20,20)f32
+nn.Conv2d                0.model.77.m_kpt.2.8.conv 1 1 259 260 bias=True dilation=(1,1) groups=512 in_channels=512 kernel_size=(3,3) out_channels=512 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,1,3,3)f32 #259=(1,512,20,20)f32 #260=(1,512,20,20)f32
 F.silu                   F.silu_30                1 1 260 261 $input=260 #260=(1,512,20,20)f32 #261=(1,512,20,20)f32
-nn.Conv2d                model.77.m_kpt.2.9.conv  1 1 261 262 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=512 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,512,1,1)f32 #261=(1,512,20,20)f32 #262=(1,512,20,20)f32
+nn.Conv2d                0.model.77.m_kpt.2.9.conv 1 1 261 262 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=512 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,512,1,1)f32 #261=(1,512,20,20)f32 #262=(1,512,20,20)f32
 F.silu                   F.silu_31                1 1 262 263 $input=262 #262=(1,512,20,20)f32 #263=(1,512,20,20)f32
-nn.Conv2d                model.77.m_kpt.2.10.conv 1 1 263 264 bias=True dilation=(1,1) groups=512 in_channels=512 kernel_size=(3,3) out_channels=512 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,1,3,3)f32 #263=(1,512,20,20)f32 #264=(1,512,20,20)f32
+nn.Conv2d                0.model.77.m_kpt.2.10.conv 1 1 263 264 bias=True dilation=(1,1) groups=512 in_channels=512 kernel_size=(3,3) out_channels=512 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(512)f32 @weight=(512,1,3,3)f32 #263=(1,512,20,20)f32 #264=(1,512,20,20)f32
 F.silu                   F.silu_32                1 1 264 265 $input=264 #264=(1,512,20,20)f32 #265=(1,512,20,20)f32
-nn.Conv2d                model.77.m_kpt.2.11      1 1 265 266 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=45 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(45)f32 @weight=(45,512,1,1)f32 #265=(1,512,20,20)f32 #266=(1,45,20,20)f32
+nn.Conv2d                0.model.77.m_kpt.2.11    1 1 265 266 bias=True dilation=(1,1) groups=1 in_channels=512 kernel_size=(1,1) out_channels=45 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(45)f32 @weight=(45,512,1,1)f32 #265=(1,512,20,20)f32 #266=(1,45,20,20)f32
 torch.cat                torch.cat_144            2 1 243 266 267 dim=1 #243=(1,18,20,20)f32 #266=(1,45,20,20)f32 #267=(1,63,20,20)f32
 Tensor.view              Tensor.view_118          1 1 267 268 shape=(1,3,21,20,20) $input=267 #267=(1,63,20,20)f32 #268=(1,3,21,20,20)f32
 torch.permute            torch.permute_149        1 1 268 269 dims=(0,1,3,4,2) $input=268 #268=(1,3,21,20,20)f32 #269=(1,3,20,20,21)f32
@@ -275,7 +275,7 @@ BinaryOp                 mul_20                   1 1 277 280 0=2 1=1 2=2.000000
 BinaryOp                 sub_21                   1 1 280 281 0=1 1=1 2=5.000000e-01
 BinaryOp                 add_22                   2 1 281 274 282 0=0 #274=(1,1,400,2)f32
 BinaryOp                 mul_23                   2 1 282 276 283 0=2 #283=(1,3,400,2)f32
-pnnx.Attribute           pnnx_fold_1366           0 1 284 @pnnx_fold_1366=(1,3,1,2)f32 #284=(1,3,1,2)f32
+pnnx.Attribute           pnnx_fold_974            0 1 284 @pnnx_fold_974=(1,3,1,2)f32 #284=(1,3,1,2)f32
 BinaryOp                 mul_24                   1 1 278 285 0=2 1=1 2=2.000000e+00 #278=(1,3,400,2)f32
 BinaryOp                 pow_25                   1 1 285 286 0=6 1=1 2=2.000000e+00
 BinaryOp                 mul_26                   2 1 286 284 287 0=2 #284=(1,3,1,2)f32 #287=(1,3,400,2)f32
@@ -287,4 +287,5 @@ Tensor.view              Tensor.view_117          1 1 291 292 shape=(1,-1,21) $i
 torch.cat                torch.cat_141            4 1 179 183 175 184 293 dim=-1 #179=(1,3,6400,2)f32 #183=(1,3,6400,2)f32 #175=(1,3,6400,2)f32 #184=(1,3,6400,15)f32 #293=(1,3,6400,21)f32
 Tensor.view              Tensor.view_109          1 1 293 294 shape=(1,-1,21) $input=293 #293=(1,3,6400,21)f32 #294=(1,19200,21)f32
 torch.cat                torch.cat_146            3 1 294 292 290 295 dim=1 #294=(1,19200,21)f32 #292=(1,4800,21)f32 #290=(1,1200,21)f32 #295=(1,25200,21)f32
-pnnx.Output              pnnx_output_0            1 0 295 #295=(1,25200,21)f32
+models.common.NMS_Export 1                        1 1 295 296 #295=(1,25200,21)f32 #296=(1,25200,21)f32
+pnnx.Output              pnnx_output_0            1 0 296 #296=(1,25200,21)f32

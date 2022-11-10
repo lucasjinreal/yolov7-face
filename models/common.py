@@ -528,6 +528,8 @@ class NMS_Export(nn.Module):
         self.kpt_label = kpt_label
 
     def forward(self, x):
+        x *= 2
+        return x
         if isinstance(x, tuple):
             x = x[0]
         print(f'------ NMS_Export: {x}')
