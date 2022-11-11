@@ -15,6 +15,22 @@ Download the model place into `weights` folder, then run:
 python detect.py --weights weights/yolov7-tiny-face.pt --view-img
 ```
 
+### Deploy
+
+事实上这个仓库主要是验证wnnx在复杂模型下的推理能力，当然这当中存在着非常多的坑，最终，我们可以做到NCNN里面做不到的东西，后处理几乎全部融合在模型里面，外部只需要做一个score判断即可。
+
+wnnx的推理结果：
+
+![](https://raw.githubusercontent.com/jinfagang/public_images/master/20221111191658.png)
+
+![](https://raw.githubusercontent.com/jinfagang/public_images/master/20221111191719.png)
+
+![](https://raw.githubusercontent.com/jinfagang/public_images/master/20221111191731.png)
+
+第一张图为yolov7-tiny，后面两张图为 yolov7-lite-e，单线程在CPU下跑的realtime，多线程更快，fp16更快，精度还可以。
+
+
+
 
 ### Export
 
