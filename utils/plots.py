@@ -71,14 +71,14 @@ def plot_one_box(x, im, color=None, label=None, line_thickness=3, kpt_label=Fals
     tl = line_thickness or round(0.002 * (im.shape[0] + im.shape[1]) / 2) + 1  # line/font thickness
     color = color or [random.randint(0, 255) for _ in range(3)]
     c1, c2 = (int(x[0]), int(x[1])), (int(x[2]), int(x[3]))
-    cv2.rectangle(im, c1, c2, (255,0,0), thickness=tl*1//3, lineType=cv2.LINE_AA)
+    cv2.rectangle(im, c1, c2, [0, 255, 0], thickness=tl*1//3, lineType=cv2.LINE_AA)
     if label:
         if len(label.split(' ')) > 1:
             label = label.split(' ')[-1]
             tf = max(tl - 1, 1)  # font thickness
             t_size = cv2.getTextSize(label, 0, fontScale=tl / 6, thickness=tf)[0]
             c2 = c1[0] + t_size[0], c1[1] - t_size[1] - 3
-            cv2.rectangle(im, c1, c2, color, -1, cv2.LINE_AA)  # filled
+            cv2.rectangle(im, c1, c2, [0, 255, 0], -1, cv2.LINE_AA)  # filled
             cv2.putText(im, label, (c1[0], c1[1] - 2), 0, tl / 6, [225, 255, 255], thickness=tf//2, lineType=cv2.LINE_AA)
     if kpt_label:
         plot_skeleton_kpts(im, kpts, steps, orig_shape=orig_shape)
